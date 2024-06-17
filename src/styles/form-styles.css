@@ -1,0 +1,169 @@
+/* Gradient background for the entire page */
+
+/* Container for the login form and register form */
+.form-container, .register-form-container {
+  background: white;
+  padding: 2rem;
+  padding-right: 3rem;
+  
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+  margin: 20px 0; /* Add some margin to the top and bottom of the form */
+}
+.back-button {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: #FFFFFF;
+  color: #333333;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.back-button:hover {
+  background: #EEEEEE;
+  color: #333333;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form heading */
+.form-container h2, .register-form-container h2 {
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+/* Form group styles */
+.form-group, .register-form-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.form-group label, .register-form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #666;
+}
+
+.form-group input, .register-form-group input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Toggle password visibility option */
+.form-options, .register-show-password {
+  margin-top: 1rem;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Align Items Vertically */
+}
+
+.show-password, .register-show-password {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.show-password input[type="checkbox"], .register-show-password input[type="checkbox"] {
+  margin-right: 0.5rem;
+  margin-top: 0;
+}
+
+/* Submit button */
+.btn-submit, .register-btn-submit {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #FFA500;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover, .register-btn-submit:hover {
+  background-color: #FF8C00;
+}
+
+.btn-mg{
+  margin:1rem;
+}
+
+
+.btn-small{
+  padding: 0.75rem;
+  margin: 0.3rem;
+  background-color: #FFA500;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+/* Links for register and forgot password */
+.form-link {
+  display: block;
+  margin-top: 1rem;
+  color: #FFA500;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.form-link:hover {
+  text-decoration: underline;
+}
+
+
+/* Avatar upload section */
+.user-info-avatar {
+    display: flex;
+    align-items: center;
+}
+
+.user-info-avatar img {
+    border-radius: 50%; /* Round avatar image */
+    margin-right: 1rem;
+}
+
+
+.user-info-avatar .btn {
+    padding: 0.5rem 1rem;
+    background-color: #FFA500;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.user-info-avatar .btn:hover {
+    background-color: #FF8C00;
+}
+
+.textarea{
+  width: 300rem;
+  height: 120px;
+  margin-Bottom: 10px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  
+}
+
+.textarea-container{
+  margin: 2rem;
+}

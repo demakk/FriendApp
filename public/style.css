@@ -1,0 +1,20 @@
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    font-family: 'Roboto', sans-serif; /* Apply Roboto as the default font */
+}
+
+body {
+    margin: 0;x
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #FAD126, #FF564E);
+    min-height: 100vh; /* Ensure the background covers the entire height */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to start from the top */
+    padding: 20px 0; /* Add padding at the top and bottom */
+    box-sizing: border-box;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+  }
+  

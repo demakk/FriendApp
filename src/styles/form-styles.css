@@ -1,6 +1,6 @@
-/* Gradient background for the entire page */
 
-/* Container for the login form and register form */
+
+
 .form-container, .register-form-container {
   background: white;
   padding: 2rem;
@@ -10,7 +10,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 300px;
   text-align: center;
-  margin: 20px 0; /* Add some margin to the top and bottom of the form */
+  margin: 20px 0;
 }
 .back-button {
   position: absolute;
@@ -59,7 +59,7 @@
   border-radius: 5px;
 }
 
-/* Toggle password visibility option */
+
 .form-options, .register-show-password {
   margin-top: 1rem;
   text-align: left;

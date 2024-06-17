@@ -1,11 +1,11 @@
-import React, {useEffect, useRef, useState} from "react";
+import React, {useEffect, useState} from "react";
 import { useNavigate } from 'react-router-dom';
 import '../styles/account-styles.css';
 import Backendless from "backendless";
 import axios from 'axios';
 import fileDownload from "js-file-download";
-import ModalWindow from "./modal-window";
-import loginForm from "./login-form";
+import ModalWindow from "./popup";
+
 
 function Account() {
 
@@ -16,15 +16,13 @@ function Account() {
     const [file, setFile] = useState()
     const [avatar, setAvatar] = useState()
     const [newAvatar, setNewAvatar] = useState()
-    const [avatarURL, setAvatarURL] = useState({})
+    const [ setAvatarURL] = useState({})
     const [userFiles, setUserFiles] = useState([])
-    const [fileURL, setFileURL] = useState('')
     const [modalIsActive, setModalIsActive] = useState(false)
     const [fileForShare, setFileForShare] = useState({})
     const [geo, setGeo] = useState({longitude: 0, latitude: 0})
     const [friendName, setFriendName] = useState('')
-    const [friends, setFriends] = useState([])
-    const [friendsRequests, setFriendsRequests] = useState([])
+    const [friendsRequests] = useState([])
     const [allFriends, setAllFriends] = useState([])
 
     const navigate = useNavigate()
@@ -189,19 +187,6 @@ function Account() {
         }
     }
 
-    const getFriendsRequests = async () => {
-        try {
-            const whereClause = `friends->'$.friendId'='${user.objectId}'`
-            const queryBuilder = Backendless.DataQueryBuilder.create()
-            queryBuilder.addProperty(whereClause)
-            const data = await Backendless.Data.of('Users').find(queryBuilder)
-            setFriendsRequests(data)
-            console.log(data)
-            console.log(friendsRequests)
-        } catch(err) {
-            console.log(err)
-        }
-    }
 
     const getAllFriends = async () => {
         try {
@@ -255,10 +240,10 @@ function Account() {
 
     return(
         <div>
-        {/* Modal Integration */}
+        
         {modalIsActive && <ModalWindow 
             file={fileForShare} 
-            closeModal={closeModal} // Pass closeModal function as a prop
+            closeModal={closeModal} 
         />}
             <div className="account-container">
                 <div className="account-content">

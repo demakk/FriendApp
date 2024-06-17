@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import '../styles/popup-styles.css';
 import Backendless from "backendless";
 
@@ -15,7 +15,7 @@ function ModalWindow({ file, closeModal }) {
             if (userByName) {
                 const sourceURL = `${file.username}/${file.fileName}`;
                 const targetURL = `${username}/Shared-folder`;
-                const res = await Backendless.Files.copyFile(sourceURL, targetURL);
+                await Backendless.Files.copyFile(sourceURL, targetURL);
                 console.log("File shared successfully");
                 setSuccessMessage("File shared successfully!");
             } else {

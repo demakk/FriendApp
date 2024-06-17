@@ -1,26 +1,23 @@
-import React, { useState } from "react";
+
 import { Link } from "react-router-dom";
-import Backendless from "backendless";
-import homePageStyles from '../styles/home-page-styles.css';
-import linkStyles from '../styles/link-styles';
+import '../styles/home-page-styles.css';
+
 
 function Home() {
-
-    return(
-        <div className={homePageStyles}>
-            <div className="home-page-container">
-                <div className="home-page content">
-                    <h1>Home page</h1>
+    return (
+        <div className="home-page">
+            <div className="centered-container">
+                <div className="content-container">
                     <div className="nav-links">
                         <div className="nav-link">
-                            <Link to="/login" style={linkStyles}><p>Login</p></Link><br />
-                            <Link to="/account" style={linkStyles}><p>My Account</p></Link>
+                            <Link to="/login" className="link"><p>Login</p></Link>
+                            <Link to="/account" className="link"><p>Go to my account</p></Link>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
 export default Home;
